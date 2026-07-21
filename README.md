@@ -6,6 +6,8 @@ Proyecto educativo siguiendo el [Curso Definitivo de Tailwind CSS](https://www.u
 
 Este proyecto es un ejemplo introductorio para aprender los fundamentos de **Tailwind CSS** utilizando la instalación oficial con **Tailwind CLI**.
 
+> **Nota**: El curso en Udemy utiliza **Tailwind CSS v3**, sin embargo, este proyecto está configurado con **Tailwind CSS v4**.
+
 ## Instalación
 
 La forma más simple y rápida para comenzar con Tailwind CSS desde cero es utilizar la herramienta **Tailwind CLI**. También está disponible como [ejecutable independiente](https://github.com/tailwindlabs/tailwindcss/releases/latest) si deseas utilizarlo sin instalar Node.js.
