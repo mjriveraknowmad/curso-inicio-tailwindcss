@@ -6,8 +6,66 @@
   <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hola mundo!
-  </h1>
+  <!-- Navbar: Esto no es parte del curso, pero sí los html de carpeta basicos-->
+  <nav class="bg-slate-900 text-white shadow-lg">
+    <div class="mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <div class="text-2xl font-bold text-blue-400">
+          <a href="./index.html">Tailwind CSS</a>
+        </div>
+        <ul class="flex space-x-6">
+          <li>
+            <a href="./index.html" class="hover:text-blue-400 transition-colors">
+              Inicio
+            </a>
+          </li>
+          <li class="relative group">
+            <button class="hover:text-blue-400 transition-colors">
+              Básicos ▼
+            </button>
+            <!-- Dropdown Menu -->
+            <ul class="absolute left-0 mt-0 w-48 bg-slate-800 text-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
+              <li>
+                <a href="./basicos/color.html" class="block px-4 py-2 hover:bg-blue-500 first:rounded-t-md">
+                  Color
+                </a>
+              </li>
+              <li>
+                <a href="./basicos/espaciado.html" class="block px-4 py-2 hover:bg-blue-500">
+                  Espaciado
+                </a>
+              </li>
+              <li>
+                <a href="./basicos/container.html" class="block px-4 py-2 hover:bg-blue-500">
+                  Container
+                </a>
+              </li>
+              <li>
+                <a href="./basicos/breakpoints.html" class="block px-4 py-2 hover:bg-blue-500 last:rounded-b-md">
+                  Breakpoints
+                </a>
+              </li>
+              <li>
+                <a href="./sizing.html"  class="block px-4 py-2 hover:bg-blue-500 last:rounded-b-md">
+                  Sizing
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="px-4 py-8">
+    <h1 class="text-3xl font-bold">
+      ¡Bienvenido a Tailwind CSS!
+    </h1>
+    <p>
+      Este proyecto es un curso interactivo para aprender los fundamentos de Tailwind CSS. 
+      Utiliza el menú superior para explorar los diferentes temas.
+    </p>
+  </main>
 </body>
 </html>
