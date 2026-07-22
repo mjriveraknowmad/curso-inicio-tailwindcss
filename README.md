@@ -69,18 +69,59 @@ Agrega el archivo CSS compilado a la etiqueta `<head>` y comienza a usar las cla
 
 ```
 ├── src/
-│   ├── index.html      # Archivo HTML principal
-│   ├── input.css       # Archivo CSS de entrada (con importación de Tailwind)
-│   └── output.css      # Archivo CSS compilado (generado automáticamente)
-├── package.json        # Dependencias del proyecto
-└── README.md          # Este archivo
+│   ├── index.html              # Página principal con navbar
+│   ├── input.css               # Archivo CSS de entrada (con importación de Tailwind)
+│   ├── output.css              # Archivo CSS compilado (generado automáticamente)
+│   │
+│   ├── basicos/                # Lecciones de conceptos básicos
+│   │   ├── color.html          # Uso de colores en Tailwind
+│   │   ├── espaciado.html      # Padding y margin
+│   │   ├── container.html      # Contenedores responsivos
+│   │   ├── breakpoints.html    # Puntos de quiebre responsive
+│   │   └── sizing.html         # Tamaños y dimensiones
+│   │
+│   └── utils-tipografia/       # Utilidades de tipografía
+│       ├── font.html           # Fuentes y familias tipográficas
+│       └── text.html           # Estilos de texto
+│
+├── package.json                # Dependencias del proyecto
+└── README.md                   # Este archivo
 ```
 
 ## Uso
 
-1. **Iniciar el compilador**: Ejecuta el comando del Paso 3 para que Tailwind compile tu CSS en tiempo real
-2. **Desarrollar**: Abre `src/index.html` en tu navegador y comienza a agregar clases de Tailwind
-3. **Ver cambios**: Los estilos se actualizarán automáticamente gracias al modo `--watch`
+1. **Instalar dependencias**: 
+   ```bash
+   npm install
+   ```
+
+2. **Iniciar el compilador**: Ejecuta el comando para que Tailwind compile tu CSS en tiempo real:
+   ```bash
+   npm run tailwind:build
+   ```
+
+3. **Abrir en navegador**: Abre `src/index.html` en tu navegador
+   - Verás una barra de navegación con acceso a todas las secciones del curso
+   - Haz clic en "Básicos" para ver un menú desplegable con lecciones fundamentales
+   - Haz clic en "Utils Tipografía" para explorar utilidades de texto y fuentes
+
+4. **Desarrollar**: Agrega nuevas clases de Tailwind a los archivos HTML
+   - Los estilos se actualizarán automáticamente gracias al modo `--watch`
+
+## Secciones del Curso
+
+### 📚 Básicos
+Aprende los conceptos fundamentales de Tailwind CSS:
+- **Color**: Cómo aplicar colores a backgrounds, texto y bordes
+- **Espaciado**: Padding y margin para controlar el espacio
+- **Container**: Contenedores responsivos y centramiento
+- **Breakpoints**: Diseño responsivo con puntos de quiebre
+- **Sizing**: Tamaños y dimensiones de elementos
+
+### 🔤 Utils Tipografía
+Domina las utilidades de tipografía:
+- **Font**: Familias tipográficas y estilos de fuente
+- **Text**: Tamaños, pesos y estilos de texto
 
 ## Documentación
 
