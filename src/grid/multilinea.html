@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Grid - Multilínea</title>
+     <link href="../output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8">
+     <div class="max-w-7xl mx-auto">
+          <h1 class="text-4xl font-bold mb-4 text-center">Grid - Contenido Multilínea</h1>
+          <p class="text-center text-gray-600 mb-12">
+               Para que <strong>justify-content</strong> y <strong>align-content</strong> sean visibles, 
+               las columnas/filas deben tener tamaño fijo (<code>auto</code>) menor que el contenedor, 
+               dejando espacio libre para distribuir.
+          </p>
+
+          <!-- justify-content (alineación horizontal del contenido) -->
+          <section class="mb-12">
+               <h2 class="text-2xl font-bold mb-2 text-gray-800">justify-content — Alineación Horizontal de las Columnas</h2>
+               <p class="text-gray-500 mb-6 text-sm">Columnas con tamaño <code>auto</code> (fijo al contenido) dentro de un contenedor más ancho → espacio libre horizontal visible</p>
+               <div class="grid grid-cols-4 gap-6">
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">justify-start</p>
+                         <div class="w-64 h-52 bg-blue-300 border-2 border-blue-500 grid grid-cols-[auto_auto] gap-3 justify-start content-start p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">justify-center</p>
+                         <div class="w-64 h-52 bg-green-300 border-2 border-green-500 grid grid-cols-[auto_auto] gap-3 justify-center content-start p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">justify-end</p>
+                         <div class="w-64 h-52 bg-purple-300 border-2 border-purple-500 grid grid-cols-[auto_auto] gap-3 justify-end content-start p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">justify-between</p>
+                         <div class="w-64 h-52 bg-red-300 border-2 border-red-500 grid grid-cols-[auto_auto] gap-3 justify-between content-start p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">justify-around</p>
+                         <div class="w-64 h-52 bg-orange-300 border-2 border-orange-500 grid grid-cols-[auto_auto] gap-3 justify-around content-start p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">justify-evenly</p>
+                         <div class="w-64 h-52 bg-yellow-300 border-2 border-yellow-500 grid grid-cols-[auto_auto] gap-3 justify-evenly content-start p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">justify-stretch</p>
+                         <div class="w-64 h-52 bg-lime-300 border-2 border-lime-500 grid grid-cols-[auto_auto] gap-3 justify-stretch content-start p-3">
+                              <div class="bg-white rounded h-14"></div>
+                              <div class="bg-white rounded h-14"></div>
+                              <div class="bg-white rounded h-14"></div>
+                              <div class="bg-white rounded h-14"></div>
+                         </div>
+                    </div>
+
+               </div>
+          </section>
+
+          <!-- align-content (alineación vertical del contenido) -->
+          <section class="mb-12">
+               <h2 class="text-2xl font-bold mb-2 text-gray-800">align-content — Alineación Vertical de las Filas</h2>
+               <p class="text-gray-500 mb-6 text-sm">Filas con tamaño <code>auto</code> (fijo al contenido) dentro de un contenedor más alto → espacio libre vertical visible</p>
+               <div class="grid grid-cols-4 gap-6">
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">content-start</p>
+                         <div class="w-64 h-80 bg-cyan-300 border-2 border-cyan-500 grid grid-cols-[auto_auto] gap-3 justify-center content-start p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">content-center</p>
+                         <div class="w-64 h-80 bg-pink-300 border-2 border-pink-500 grid grid-cols-[auto_auto] gap-3 justify-center content-center p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">content-end</p>
+                         <div class="w-64 h-80 bg-indigo-300 border-2 border-indigo-500 grid grid-cols-[auto_auto] gap-3 justify-center content-end p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">content-between</p>
+                         <div class="w-64 h-80 bg-violet-300 border-2 border-violet-500 grid grid-cols-[auto_auto] gap-3 justify-center content-between p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">content-around</p>
+                         <div class="w-64 h-80 bg-fuchsia-300 border-2 border-fuchsia-500 grid grid-cols-[auto_auto] gap-3 justify-center content-around p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">content-evenly</p>
+                         <div class="w-64 h-80 bg-rose-300 border-2 border-rose-500 grid grid-cols-[auto_auto] gap-3 justify-center content-evenly p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">content-stretch</p>
+                         <div class="w-64 h-80 bg-amber-300 border-2 border-amber-500 grid grid-cols-[auto_auto] gap-3 justify-center content-stretch p-3">
+                              <div class="bg-white rounded w-14"></div>
+                              <div class="bg-white rounded w-14"></div>
+                              <div class="bg-white rounded w-14"></div>
+                              <div class="bg-white rounded w-14"></div>
+                         </div>
+                    </div>
+
+               </div>
+          </section>
+
+          <!-- place-content (horizontal + vertical) -->
+          <section class="mb-12">
+               <h2 class="text-2xl font-bold mb-2 text-gray-800">place-content — Horizontal + Vertical del Contenido</h2>
+               <p class="text-gray-500 mb-6 text-sm">Shorthand de <code>align-content</code> + <code>justify-content</code> al mismo tiempo</p>
+               <div class="grid grid-cols-4 gap-6">
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">place-content-start</p>
+                         <div class="w-64 h-80 bg-sky-300 border-2 border-sky-500 grid grid-cols-[auto_auto] gap-3 place-content-start p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">place-content-center</p>
+                         <div class="w-64 h-80 bg-emerald-300 border-2 border-emerald-500 grid grid-cols-[auto_auto] gap-3 place-content-center p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">place-content-end</p>
+                         <div class="w-64 h-80 bg-teal-300 border-2 border-teal-500 grid grid-cols-[auto_auto] gap-3 place-content-end p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">place-content-between</p>
+                         <div class="w-64 h-80 bg-slate-300 border-2 border-slate-500 grid grid-cols-[auto_auto] gap-3 place-content-between p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">place-content-around</p>
+                         <div class="w-64 h-80 bg-stone-300 border-2 border-stone-500 grid grid-cols-[auto_auto] gap-3 place-content-around p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">place-content-evenly</p>
+                         <div class="w-64 h-80 bg-neutral-300 border-2 border-neutral-500 grid grid-cols-[auto_auto] gap-3 place-content-evenly p-3">
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                              <div class="bg-white rounded w-14 h-14"></div>
+                         </div>
+                    </div>
+
+                    <div>
+                         <p class="font-semibold mb-2 text-sm">place-content-stretch</p>
+                         <div class="w-64 h-80 bg-zinc-300 border-2 border-zinc-500 grid grid-cols-[auto_auto] gap-3 place-content-stretch p-3">
+                              <div class="bg-white rounded"></div>
+                              <div class="bg-white rounded"></div>
+                              <div class="bg-white rounded"></div>
+                              <div class="bg-white rounded"></div>
+                         </div>
+                    </div>
+
+               </div>
+          </section>
+
+     </div>
+</body>
+</html>

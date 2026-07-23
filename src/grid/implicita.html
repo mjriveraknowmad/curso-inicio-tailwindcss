@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+    <link href="../output.css" rel="stylesheet">
+</head>
+<body class="bg-blue-700 flex flex-col justify-center items-center h-screen gap-4">
+     
+     <div class="text-white max-w-2xl text-sm bg-blue-900/60 rounded-lg p-4 space-y-1">
+          <p><strong class="text-yellow-300">auto-rows-fr:</strong> Con estas filas implícitas (las que se crean automáticamente al desbordar el grid definido, es decir las filas no definidas explícitamente mediante grid-rows) toman una fracción igual del espacio disponible, en lugar de ajustarse al contenido.</p>
+          <p><strong class="text-yellow-300">grid-flow-row-dense:</strong> El algoritmo de colocación intenta rellenar huecos vacíos usando ítems posteriores más pequeños, evitando espacios en blanco cuando hay ítems de distintos tamaños (col-span).</p>
+     </div>
+
+     <div class="w-6/12 h-4/6 bg-blue-300 p-5 grid grid-cols-6 grid-rows-2 auto-rows-fr grid-flow-row-dense gap-8">
+          <div class="bg-indigo-500 rounded-lg col-span-4">1</div>
+          <div class="bg-green-500 rounded-lg col-span-3">2</div>
+          <div class="bg-white rounded-lg">3</div>
+          <div class="bg-white rounded-lg">4</div>
+          <div class="bg-white rounded-lg">5</div>
+          <div class="bg-white rounded-lg">6</div>
+          <div class="bg-white rounded-lg">7</div>
+          <div class="bg-white rounded-lg">8</div>
+          <div class="bg-white rounded-lg">9</div>
+          <div class="bg-white rounded-lg">10</div>
+          <div class="bg-white rounded-lg">11</div>
+          <div class="bg-white rounded-lg">12</div>
+     </div>
+</body>
+</html>

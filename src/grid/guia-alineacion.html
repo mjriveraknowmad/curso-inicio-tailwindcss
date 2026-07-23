@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Grid - Guía de Alineación</title>
+     <link href="../output.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-8">
+<div class="max-w-7xl mx-auto">
+
+     <h1 class="text-4xl font-bold text-center mb-4">Guía de Alineación en CSS Grid</h1>
+     <div class="bg-white border border-gray-200 rounded-xl p-6 mb-12 text-sm text-gray-700 space-y-2">
+          <p><strong class="text-blue-600">justify-items</strong> → Alineación <u>horizontal</u> (eje X) de <strong>todos</strong> los ítems dentro de su celda</p>
+          <p><strong class="text-green-600">items (align-items)</strong> → Alineación <u>vertical</u> (eje Y) de <strong>todos</strong> los ítems dentro de su celda</p>
+          <p><strong class="text-purple-600">place-items</strong> → Shorthand de <code>align-items</code> + <code>justify-items</code> al mismo tiempo</p>
+          <p><strong class="text-orange-600">content</strong> → Alinea el <u>grid completo</u> cuando las pistas (filas/columnas) son menores que el contenedor (multilínea)</p>
+          <p><strong class="text-red-600">self</strong> → Alinea <u>un solo ítem individual</u>, sobreescribiendo la alineación del contenedor</p>
+     </div>
+
+
+     <!-- ============================================================ -->
+     <!-- 1. justify-items — Alineación HORIZONTAL dentro de la celda  -->
+     <!-- ============================================================ -->
+     <section class="mb-16">
+          <div class="bg-blue-600 text-white rounded-t-xl px-6 py-4">
+               <h2 class="text-2xl font-bold">1. justify-items — Alineación Horizontal (eje X)</h2>
+               <p class="text-blue-100 text-sm mt-1">
+                    Controla dónde se coloca el ítem <strong>dentro de su celda</strong> en horizontal.
+                    Para que sea visible, el ítem debe ser <strong>más pequeño que la celda</strong>.
+               </p>
+          </div>
+          <div class="bg-white border border-blue-200 rounded-b-xl p-6 grid grid-cols-4 gap-6">
+
+               <!-- start -->
+               <div>
+                    <p class="font-bold text-blue-700 mb-1">justify-items-start</p>
+                    <p class="text-xs text-gray-500 mb-3">El ítem se pega al inicio (izquierda) de su celda</p>
+                    <div class="h-56 bg-blue-100 border-2 border-blue-400 grid grid-cols-2 grid-rows-2 gap-2 p-2 justify-items-start">
+                         <div class="bg-blue-500 rounded w-10 h-10"></div>
+                         <div class="bg-blue-500 rounded w-10 h-10"></div>
+                         <div class="bg-blue-500 rounded w-10 h-10"></div>
+                         <div class="bg-blue-500 rounded w-10 h-10"></div>
+                    </div>
+               </div>
+
+               <!-- center -->
+               <div>
+                    <p class="font-bold text-blue-700 mb-1">justify-items-center</p>
+                    <p class="text-xs text-gray-500 mb-3">El ítem se centra horizontalmente en su celda</p>
+                    <div class="h-56 bg-blue-100 border-2 border-blue-400 grid grid-cols-2 grid-rows-2 gap-2 p-2 justify-items-center">
+                         <div class="bg-blue-500 rounded w-10 h-10"></div>
+                         <div class="bg-blue-500 rounded w-10 h-10"></div>
+                         <div class="bg-blue-500 rounded w-10 h-10"></div>
+                         <div class="bg-blue-500 rounded w-10 h-10"></div>
+                    </div>
+               </div>
+
+               <!-- end -->
+               <div>
+                    <p class="font-bold text-blue-700 mb-1">justify-items-end</p>
+                    <p class="text-xs text-gray-500 mb-3">El ítem se pega al final (derecha) de su celda</p>
+                    <div class="h-56 bg-blue-100 border-2 border-blue-400 grid grid-cols-2 grid-rows-2 gap-2 p-2 justify-items-end">
+                         <div class="bg-blue-500 rounded w-10 h-10"></div>
+                         <div class="bg-blue-500 rounded w-10 h-10"></div>
+                         <div class="bg-blue-500 rounded w-10 h-10"></div>
+                         <div class="bg-blue-500 rounded w-10 h-10"></div>
+                    </div>
+               </div>
+
+               <!-- stretch -->
+               <div>
+                    <p class="font-bold text-blue-700 mb-1">justify-items-stretch</p>
+                    <p class="text-xs text-gray-500 mb-3">El ítem ocupa todo el ancho de su celda (por defecto)</p>
+                    <div class="h-56 bg-blue-100 border-2 border-blue-400 grid grid-cols-2 grid-rows-2 gap-2 p-2 justify-items-stretch">
+                         <div class="bg-blue-500 rounded h-10"></div>
+                         <div class="bg-blue-500 rounded h-10"></div>
+                         <div class="bg-blue-500 rounded h-10"></div>
+                         <div class="bg-blue-500 rounded h-10"></div>
+                    </div>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- ============================================================ -->
+     <!-- 2. items (align-items) — Alineación VERTICAL dentro de celda -->
+     <!-- ============================================================ -->
+     <section class="mb-16">
+          <div class="bg-green-600 text-white rounded-t-xl px-6 py-4">
+               <h2 class="text-2xl font-bold">2. items (align-items) — Alineación Vertical (eje Y)</h2>
+               <p class="text-green-100 text-sm mt-1">
+                    Controla dónde se coloca el ítem <strong>dentro de su celda</strong> en vertical.
+                    La celda debe ser <strong>más alta que el ítem</strong> para que se note.
+               </p>
+          </div>
+          <div class="bg-white border border-green-200 rounded-b-xl p-6 grid grid-cols-4 gap-6">
+
+               <!-- start -->
+               <div>
+                    <p class="font-bold text-green-700 mb-1">items-start</p>
+                    <p class="text-xs text-gray-500 mb-3">El ítem se pega arriba de su celda</p>
+                    <div class="h-56 bg-green-100 border-2 border-green-400 grid grid-cols-2 grid-rows-2 gap-2 p-2 items-start">
+                         <div class="bg-green-500 rounded w-full h-10"></div>
+                         <div class="bg-green-500 rounded w-full h-10"></div>
+                         <div class="bg-green-500 rounded w-full h-10"></div>
+                         <div class="bg-green-500 rounded w-full h-10"></div>
+                    </div>
+               </div>
+
+               <!-- center -->
+               <div>
+                    <p class="font-bold text-green-700 mb-1">items-center</p>
+                    <p class="text-xs text-gray-500 mb-3">El ítem se centra verticalmente en su celda</p>
+                    <div class="h-56 bg-green-100 border-2 border-green-400 grid grid-cols-2 grid-rows-2 gap-2 p-2 items-center">
+                         <div class="bg-green-500 rounded w-full h-10"></div>
+                         <div class="bg-green-500 rounded w-full h-10"></div>
+                         <div class="bg-green-500 rounded w-full h-10"></div>
+                         <div class="bg-green-500 rounded w-full h-10"></div>
+                    </div>
+               </div>
+
+               <!-- end -->
+               <div>
+                    <p class="font-bold text-green-700 mb-1">items-end</p>
+                    <p class="text-xs text-gray-500 mb-3">El ítem se pega abajo de su celda</p>
+                    <div class="h-56 bg-green-100 border-2 border-green-400 grid grid-cols-2 grid-rows-2 gap-2 p-2 items-end">
+                         <div class="bg-green-500 rounded w-full h-10"></div>
+                         <div class="bg-green-500 rounded w-full h-10"></div>
+                         <div class="bg-green-500 rounded w-full h-10"></div>
+                         <div class="bg-green-500 rounded w-full h-10"></div>
+                    </div>
+               </div>
+
+               <!-- stretch -->
+               <div>
+                    <p class="font-bold text-green-700 mb-1">items-stretch</p>
+                    <p class="text-xs text-gray-500 mb-3">El ítem ocupa toda la altura de su celda (por defecto)</p>
+                    <div class="h-56 bg-green-100 border-2 border-green-400 grid grid-cols-2 grid-rows-2 gap-2 p-2 items-stretch">
+                         <div class="bg-green-500 rounded w-full"></div>
+                         <div class="bg-green-500 rounded w-full"></div>
+                         <div class="bg-green-500 rounded w-full"></div>
+                         <div class="bg-green-500 rounded w-full"></div>
+                    </div>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- ============================================================ -->
+     <!-- 3. place-items — HORIZONTAL + VERTICAL (combo)               -->
+     <!-- ============================================================ -->
+     <section class="mb-16">
+          <div class="bg-purple-600 text-white rounded-t-xl px-6 py-4">
+               <h2 class="text-2xl font-bold">3. place-items — Horizontal + Vertical (Shorthand)</h2>
+               <p class="text-purple-100 text-sm mt-1">
+                    Equivale a escribir <code>align-items</code> + <code>justify-items</code> a la vez.
+                    El ítem debe ser <strong>más pequeño que la celda en ambas dimensiones</strong>.
+               </p>
+          </div>
+          <div class="bg-white border border-purple-200 rounded-b-xl p-6 grid grid-cols-4 gap-6">
+
+               <!-- start -->
+               <div>
+                    <p class="font-bold text-purple-700 mb-1">place-items-start</p>
+                    <p class="text-xs text-gray-500 mb-3">Arriba-izquierda de la celda</p>
+                    <div class="h-56 bg-purple-100 border-2 border-purple-400 grid grid-cols-2 grid-rows-2 gap-2 p-2 place-items-start">
+                         <div class="bg-purple-500 rounded w-10 h-10"></div>
+                         <div class="bg-purple-500 rounded w-10 h-10"></div>
+                         <div class="bg-purple-500 rounded w-10 h-10"></div>
+                         <div class="bg-purple-500 rounded w-10 h-10"></div>
+                    </div>
+               </div>
+
+               <!-- center -->
+               <div>
+                    <p class="font-bold text-purple-700 mb-1">place-items-center</p>
+                    <p class="text-xs text-gray-500 mb-3">Centro de la celda (perfecto centrado)</p>
+                    <div class="h-56 bg-purple-100 border-2 border-purple-400 grid grid-cols-2 grid-rows-2 gap-2 p-2 place-items-center">
+                         <div class="bg-purple-500 rounded w-10 h-10"></div>
+                         <div class="bg-purple-500 rounded w-10 h-10"></div>
+                         <div class="bg-purple-500 rounded w-10 h-10"></div>
+                         <div class="bg-purple-500 rounded w-10 h-10"></div>
+                    </div>
+               </div>
+
+               <!-- end -->
+               <div>
+                    <p class="font-bold text-purple-700 mb-1">place-items-end</p>
+                    <p class="text-xs text-gray-500 mb-3">Abajo-derecha de la celda</p>
+                    <div class="h-56 bg-purple-100 border-2 border-purple-400 grid grid-cols-2 grid-rows-2 gap-2 p-2 place-items-end">
+                         <div class="bg-purple-500 rounded w-10 h-10"></div>
+                         <div class="bg-purple-500 rounded w-10 h-10"></div>
+                         <div class="bg-purple-500 rounded w-10 h-10"></div>
+                         <div class="bg-purple-500 rounded w-10 h-10"></div>
+                    </div>
+               </div>
+
+               <!-- stretch -->
+               <div>
+                    <p class="font-bold text-purple-700 mb-1">place-items-stretch</p>
+                    <p class="text-xs text-gray-500 mb-3">Ocupa toda la celda (por defecto)</p>
+                    <div class="h-56 bg-purple-100 border-2 border-purple-400 grid grid-cols-2 grid-rows-2 gap-2 p-2 place-items-stretch">
+                         <div class="bg-purple-500 rounded"></div>
+                         <div class="bg-purple-500 rounded"></div>
+                         <div class="bg-purple-500 rounded"></div>
+                         <div class="bg-purple-500 rounded"></div>
+                    </div>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- ============================================================ -->
+     <!-- 4. content — Alinear el GRID COMPLETO (multilínea)           -->
+     <!-- ============================================================ -->
+     <section class="mb-16">
+          <div class="bg-orange-600 text-white rounded-t-xl px-6 py-4">
+               <h2 class="text-2xl font-bold">4. content — Alinear el Grid Completo (Multilínea)</h2>
+               <p class="text-orange-100 text-sm mt-1">
+                    Mueve las <strong>pistas del grid</strong> (filas y columnas) como conjunto dentro del contenedor.
+                    Solo funciona cuando las pistas tienen tamaño fijo (<code>auto</code>) y hay <strong>espacio libre sobrante</strong>.
+               </p>
+          </div>
+          <div class="bg-white border border-orange-200 rounded-b-xl p-6">
+
+               <!-- justify-content - horizontal -->
+               <h3 class="font-bold text-orange-700 mb-4">justify-content → Distribuye las columnas horizontalmente</h3>
+               <div class="grid grid-cols-4 gap-6 mb-8">
+                    <div>
+                         <p class="font-semibold text-sm mb-2">justify-start</p>
+                         <div class="h-28 bg-orange-100 border-2 border-orange-400 grid grid-cols-[auto_auto_auto] gap-2 justify-start content-center p-2">
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                         </div>
+                    </div>
+                    <div>
+                         <p class="font-semibold text-sm mb-2">justify-center</p>
+                         <div class="h-28 bg-orange-100 border-2 border-orange-400 grid grid-cols-[auto_auto_auto] gap-2 justify-center content-center p-2">
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                         </div>
+                    </div>
+                    <div>
+                         <p class="font-semibold text-sm mb-2">justify-end</p>
+                         <div class="h-28 bg-orange-100 border-2 border-orange-400 grid grid-cols-[auto_auto_auto] gap-2 justify-end content-center p-2">
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                         </div>
+                    </div>
+                    <div>
+                         <p class="font-semibold text-sm mb-2">justify-between</p>
+                         <div class="h-28 bg-orange-100 border-2 border-orange-400 grid grid-cols-[auto_auto_auto] gap-2 justify-between content-center p-2">
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                         </div>
+                    </div>
+                    <div>
+                         <p class="font-semibold text-sm mb-2">justify-around</p>
+                         <div class="h-28 bg-orange-100 border-2 border-orange-400 grid grid-cols-[auto_auto_auto] gap-2 justify-around content-center p-2">
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                         </div>
+                    </div>
+                    <div>
+                         <p class="font-semibold text-sm mb-2">justify-evenly</p>
+                         <div class="h-28 bg-orange-100 border-2 border-orange-400 grid grid-cols-[auto_auto_auto] gap-2 justify-evenly content-center p-2">
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- align-content - vertical -->
+               <h3 class="font-bold text-orange-700 mb-4">align-content → Distribuye las filas verticalmente</h3>
+               <div class="grid grid-cols-4 gap-6">
+                    <div>
+                         <p class="font-semibold text-sm mb-2">content-start</p>
+                         <div class="h-56 bg-orange-100 border-2 border-orange-400 grid grid-cols-[auto_auto] gap-2 justify-center content-start p-2">
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                         </div>
+                    </div>
+                    <div>
+                         <p class="font-semibold text-sm mb-2">content-center</p>
+                         <div class="h-56 bg-orange-100 border-2 border-orange-400 grid grid-cols-[auto_auto] gap-2 justify-center content-center p-2">
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                         </div>
+                    </div>
+                    <div>
+                         <p class="font-semibold text-sm mb-2">content-end</p>
+                         <div class="h-56 bg-orange-100 border-2 border-orange-400 grid grid-cols-[auto_auto] gap-2 justify-center content-end p-2">
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                         </div>
+                    </div>
+                    <div>
+                         <p class="font-semibold text-sm mb-2">content-between</p>
+                         <div class="h-56 bg-orange-100 border-2 border-orange-400 grid grid-cols-[auto_auto] gap-2 justify-center content-between p-2">
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                         </div>
+                    </div>
+                    <div>
+                         <p class="font-semibold text-sm mb-2">content-around</p>
+                         <div class="h-56 bg-orange-100 border-2 border-orange-400 grid grid-cols-[auto_auto] gap-2 justify-center content-around p-2">
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                         </div>
+                    </div>
+                    <div>
+                         <p class="font-semibold text-sm mb-2">content-evenly</p>
+                         <div class="h-56 bg-orange-100 border-2 border-orange-400 grid grid-cols-[auto_auto] gap-2 justify-center content-evenly p-2">
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                              <div class="bg-orange-500 rounded w-10 h-10"></div>
+                         </div>
+                    </div>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- ============================================================ -->
+     <!-- 5. self — Alinear UN SOLO ítem individual                    -->
+     <!-- ============================================================ -->
+     <section class="mb-16">
+          <div class="bg-red-600 text-white rounded-t-xl px-6 py-4">
+               <h2 class="text-2xl font-bold">5. self — Alinear un Solo Ítem Individual</h2>
+               <p class="text-red-100 text-sm mt-1">
+                    Se aplica al ítem directamente, <strong>sobreescribiendo</strong> la alineación del contenedor.
+                    El ítem verde es el que tiene la clase <code>*-self-*</code>.
+               </p>
+          </div>
+          <div class="bg-white border border-red-200 rounded-b-xl p-6 grid grid-cols-3 gap-8">
+
+               <!-- justify-self -->
+               <div>
+                    <h3 class="font-bold text-red-700 mb-4">justify-self → Mueve el ítem horizontalmente</h3>
+                    <div class="space-y-4">
+                         <div>
+                              <p class="text-xs font-semibold mb-1">justify-self-start</p>
+                              <div class="h-16 bg-red-100 border-2 border-red-300 grid grid-cols-3 gap-1 p-1 place-items-center">
+                                   <div class="bg-red-300 rounded w-8 h-8"></div>
+                                   <div class="bg-green-500 rounded w-8 h-8 justify-self-start"></div>
+                                   <div class="bg-red-300 rounded w-8 h-8"></div>
+                              </div>
+                         </div>
+                         <div>
+                              <p class="text-xs font-semibold mb-1">justify-self-center</p>
+                              <div class="h-16 bg-red-100 border-2 border-red-300 grid grid-cols-3 gap-1 p-1 place-items-start">
+                                   <div class="bg-red-300 rounded w-8 h-8"></div>
+                                   <div class="bg-green-500 rounded w-8 h-8 justify-self-center"></div>
+                                   <div class="bg-red-300 rounded w-8 h-8"></div>
+                              </div>
+                         </div>
+                         <div>
+                              <p class="text-xs font-semibold mb-1">justify-self-end</p>
+                              <div class="h-16 bg-red-100 border-2 border-red-300 grid grid-cols-3 gap-1 p-1 place-items-center">
+                                   <div class="bg-red-300 rounded w-8 h-8"></div>
+                                   <div class="bg-green-500 rounded w-8 h-8 justify-self-end"></div>
+                                   <div class="bg-red-300 rounded w-8 h-8"></div>
+                              </div>
+                         </div>
+                         <div>
+                              <p class="text-xs font-semibold mb-1">justify-self-stretch</p>
+                              <div class="h-16 bg-red-100 border-2 border-red-300 grid grid-cols-3 gap-1 p-1 place-items-center">
+                                   <div class="bg-red-300 rounded w-8 h-8"></div>
+                                   <div class="bg-green-500 rounded h-8 justify-self-stretch"></div>
+                                   <div class="bg-red-300 rounded w-8 h-8"></div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- align-self -->
+               <div>
+                    <h3 class="font-bold text-red-700 mb-4">align-self → Mueve el ítem verticalmente</h3>
+                    <div class="space-y-4">
+                         <div>
+                              <p class="text-xs font-semibold mb-1">self-start</p>
+                              <div class="h-16 bg-red-100 border-2 border-red-300 grid grid-cols-3 gap-1 p-1">
+                                   <div class="bg-red-300 rounded"></div>
+                                   <div class="bg-green-500 rounded w-8 h-8 self-start"></div>
+                                   <div class="bg-red-300 rounded"></div>
+                              </div>
+                         </div>
+                         <div>
+                              <p class="text-xs font-semibold mb-1">self-center</p>
+                              <div class="h-16 bg-red-100 border-2 border-red-300 grid grid-cols-3 gap-1 p-1">
+                                   <div class="bg-red-300 rounded"></div>
+                                   <div class="bg-green-500 rounded w-8 h-8 self-center"></div>
+                                   <div class="bg-red-300 rounded"></div>
+                              </div>
+                         </div>
+                         <div>
+                              <p class="text-xs font-semibold mb-1">self-end</p>
+                              <div class="h-16 bg-red-100 border-2 border-red-300 grid grid-cols-3 gap-1 p-1">
+                                   <div class="bg-red-300 rounded"></div>
+                                   <div class="bg-green-500 rounded w-8 h-8 self-end"></div>
+                                   <div class="bg-red-300 rounded"></div>
+                              </div>
+                         </div>
+                         <div>
+                              <p class="text-xs font-semibold mb-1">self-stretch</p>
+                              <div class="h-16 bg-red-100 border-2 border-red-300 grid grid-cols-3 gap-1 p-1">
+                                   <div class="bg-red-300 rounded"></div>
+                                   <div class="bg-green-500 rounded self-stretch"></div>
+                                   <div class="bg-red-300 rounded"></div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <!-- place-self -->
+               <div>
+                    <h3 class="font-bold text-red-700 mb-4">place-self → Horizontal + Vertical a la vez</h3>
+                    <div class="space-y-4">
+                         <div>
+                              <p class="text-xs font-semibold mb-1">place-self-start</p>
+                              <div class="h-16 bg-red-100 border-2 border-red-300 grid grid-cols-3 gap-1 p-1 place-items-center">
+                                   <div class="bg-red-300 rounded w-8 h-8"></div>
+                                   <div class="bg-green-500 rounded w-8 h-8 place-self-start"></div>
+                                   <div class="bg-red-300 rounded w-8 h-8"></div>
+                              </div>
+                         </div>
+                         <div>
+                              <p class="text-xs font-semibold mb-1">place-self-center</p>
+                              <div class="h-16 bg-red-100 border-2 border-red-300 grid grid-cols-3 gap-1 p-1 place-items-start">
+                                   <div class="bg-red-300 rounded w-8 h-8"></div>
+                                   <div class="bg-green-500 rounded w-8 h-8 place-self-center"></div>
+                                   <div class="bg-red-300 rounded w-8 h-8"></div>
+                              </div>
+                         </div>
+                         <div>
+                              <p class="text-xs font-semibold mb-1">place-self-end</p>
+                              <div class="h-16 bg-red-100 border-2 border-red-300 grid grid-cols-3 gap-1 p-1 place-items-start">
+                                   <div class="bg-red-300 rounded w-8 h-8"></div>
+                                   <div class="bg-green-500 rounded w-8 h-8 place-self-end"></div>
+                                   <div class="bg-red-300 rounded w-8 h-8"></div>
+                              </div>
+                         </div>
+                         <div>
+                              <p class="text-xs font-semibold mb-1">place-self-stretch</p>
+                              <div class="h-16 bg-red-100 border-2 border-red-300 grid grid-cols-3 gap-1 p-1 place-items-start">
+                                   <div class="bg-red-300 rounded w-8 h-8"></div>
+                                   <div class="bg-green-500 rounded place-self-stretch"></div>
+                                   <div class="bg-red-300 rounded w-8 h-8"></div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+          </div>
+     </section>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+    <link href="../output.css" rel="stylesheet">
+</head>
+<body class="bg-blue-700 flex flex-col justify-center items-center h-screen gap-6">
+
+
+
+     
+     <div class="w-full h-full flex flex-col justify-center items-center">
+          <div class="my-4 text-white">Grid con 3 columnas y 3 filas (grid grid-cols-3 grid-rows-3), y un div contenido con col-start-1, interrumpiendo el flujo, pasándolo a la columna 1</div>
+          <div class="bg-blue-300 p-5 grid grid-cols-3 grid-rows-3 gap-5 place-items-center">
+               <div class="bg-white rounded-lg w-20 h-20"></div>
+               <div class="bg-white rounded-lg w-20 h-20"></div>
+               <div class="bg-white rounded-lg w-20 h-20"></div>
+               <div class="bg-white rounded-lg w-20 h-20"></div>
+               <div class="bg-green-500 rounded-lg w-20 h-20 col-start-1">col-start-1</div>
+               <div class="bg-white rounded-lg w-20 h-20"></div>
+               <div class="bg-white rounded-lg w-20 h-20"></div>
+               <div class="bg-white rounded-lg w-20 h-20"></div>
+               <div class="bg-white rounded-lg w-20 h-20"></div>
+          </div>
+     </div>
+
+     <div class="w-full h-full flex flex-col justify-center items-center">
+          <div class="my-4 text-white">Con grid-cols-3 grid-rows-4, por lo que el resto no se ven (en este caso un div), con divs contenidos con clases de alineación en cuanto a columnas, para que se vieran podríamos usar el auto-rows-fr (añadiendo 1fr para cada item de la grid "explicita", la no definida) </div>
+          <div class="w-6/12 h-96 bg-purple-300 p-5 grid grid-cols-3 grid-rows-4 gap-5">
+               <div class="bg-white rounded-lg"></div>
+               <div class="bg-white rounded-lg"></div>
+               <div class="bg-purple-500 rounded-lg col-start-1 col-end-3">col-start-1 col-end-3</div>
+               <div class="bg-white rounded-lg"></div>
+               <div class="bg-blue-500 rounded-lg col-start-2 col-end-4">col-start-2 col-end-4</div>
+               <div class="bg-white rounded-lg"></div>
+               <div class="bg-white rounded-lg"></div>
+               <div class="bg-white rounded-lg"></div>
+               <div class="bg-white rounded-lg"></div>
+          </div>
+     </div>
+
+     <div class="w-full h-full flex flex-col justify-center items-center">
+          <div class="my-4 text-white">Con grid-cols-3 grid-rows-4, por lo que el resto no se ven (en este caso un div, para que se vieran podríamos usar el auto-rows-fr (añadiendo 1fr para cada item de la grid "explicita", la no definida)), con divs contenidos con clases de alineación en cuanto a columnas y filas</div>
+          <div class="w-6/12 h-96 bg-purple-300 p-5 grid grid-cols-3 grid-rows-4 gap-5">
+               <div class="bg-white rounded-lg"></div>
+               <div class="bg-white rounded-lg"></div>
+               <div class="bg-purple-500 rounded-lg col-start-1 col-end-3">col-start-1 col-end-3</div>
+               <div class="bg-white rounded-lg"></div>
+               <div class="bg-blue-500 rounded-lg col-start-2 col-end-4 row-start-1 row-end-3">col-start-2 col-end-4 row-start-1 row-end-3</div>
+               <div class="bg-white rounded-lg"></div>
+               <div class="bg-white rounded-lg"></div>
+               <div class="bg-white rounded-lg"></div>
+               <div class="bg-white rounded-lg"></div>
+          </div>
+     </div>
+
+
+
+</body>
+</html>
