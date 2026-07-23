@@ -6,218 +6,121 @@
   <link href="./output.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Navbar: Esto no es parte del curso, pero sí los html de carpeta basicos-->
-  <nav class="bg-slate-900 text-white shadow-lg">
-    <div class="mx-auto px-4 py-4">
+  <!-- Navbar -->
+  <nav class="bg-slate-900 text-white shadow-lg sticky top-0 z-50">
+    <div class="mx-auto px-6 py-0">
       <div class="flex justify-between items-center">
-        <div class="text-2xl font-bold text-blue-400">
-          <a href="./index.html">Tailwind CSS</a>
-        </div>
-        <ul class="flex space-x-6">
+
+        <!-- Logo -->
+        <a href="./index.html" class="flex items-center gap-2 text-xl font-bold text-blue-400 hover:text-blue-300 transition-colors py-4">
+          🌊 Tailwind CSS
+        </a>
+
+        <!-- Nav Items -->
+        <ul class="flex items-stretch text-sm">
+
+          <!-- Inicio -->
           <li>
-            <a href="./index.html" class="hover:text-blue-400 transition-colors">
+            <a href="./index.html" class="flex items-center h-full px-4 py-4 hover:bg-slate-700 hover:text-blue-300 transition-colors border-b-2 border-transparent hover:border-blue-400">
               Inicio
             </a>
           </li>
+
+          <!-- Básicos -->
           <li class="relative group">
-            <button class="hover:text-blue-400 transition-colors">
-              Básicos ▼
+            <button class="flex items-center gap-1 h-full px-4 py-4 hover:bg-slate-700 hover:text-blue-300 transition-colors border-b-2 border-transparent group-hover:bg-slate-700 group-hover:border-blue-400 group-hover:text-blue-300">
+              Básicos <span class="text-xs opacity-60">▼</span>
             </button>
-            <!-- Dropdown Menu -->
-            <ul class="absolute left-0 mt-0 w-48 bg-slate-800 text-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
-              <li>
-                <a href="./basicos/color.html" class="block px-4 py-2 hover:bg-blue-500 first:rounded-t-md">
-                  Color
-                </a>
-              </li>
-              <li>
-                <a href="./basicos/espaciado.html" class="block px-4 py-2 hover:bg-blue-500">
-                  Espaciado
-                </a>
-              </li>
-              <li>
-                <a href="./basicos/container.html" class="block px-4 py-2 hover:bg-blue-500">
-                  Container
-                </a>
-              </li>
-              <li>
-                <a href="./basicos/breakpoints.html" class="block px-4 py-2 hover:bg-blue-500 last:rounded-b-md">
-                  Breakpoints
-                </a>
-              </li>
-              <li>
-                <a href="./basicos/sizing.html"  class="block px-4 py-2 hover:bg-blue-500 last:rounded-b-md">
-                  Sizing
-                </a>
-              </li>
+            <ul class="absolute left-0 top-full w-48 bg-slate-800 rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-blue-400 py-1">
+              <li><a href="./basicos/color.html"        class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Color</a></li>
+              <li><a href="./basicos/espaciado.html"    class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Espaciado</a></li>
+              <li><a href="./basicos/container.html"    class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Container</a></li>
+              <li><a href="./basicos/breakpoints.html"  class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Breakpoints</a></li>
+              <li><a href="./basicos/sizing.html"       class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Sizing</a></li>
             </ul>
           </li>
 
+          <!-- Tipografía -->
           <li class="relative group">
-            <button class="hover:text-blue-400 transition-colors">
-              Tipografía ▼
+            <button class="flex items-center gap-1 h-full px-4 py-4 hover:bg-slate-700 hover:text-blue-300 transition-colors border-b-2 border-transparent group-hover:bg-slate-700 group-hover:border-blue-400 group-hover:text-blue-300">
+              Tipografía <span class="text-xs opacity-60">▼</span>
             </button>
-            <!-- Dropdown Menu -->
-            <ul class="absolute left-0 mt-0 w-48 bg-slate-800 text-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
-              <li>
-                <a href="./utils-tipografia/font.html" class="block px-4 py-2 hover:bg-blue-500 first:rounded-t-md">
-                  Fuentes
-                </a>
-              </li>
-              <li>
-                <a href="./utils-tipografia/text.html" class="block px-4 py-2 hover:bg-blue-500">
-                  Textos
-                </a>
-              </li>
+            <ul class="absolute left-0 top-full w-40 bg-slate-800 rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-blue-400 py-1">
+              <li><a href="./utils-tipografia/font.html" class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Fuentes</a></li>
+              <li><a href="./utils-tipografia/text.html" class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Textos</a></li>
             </ul>
           </li>
 
+          <!-- Contenedores -->
           <li class="relative group">
-            <button class="hover:text-blue-400 transition-colors">
-              Contenedores y backgrounds ▼
+            <button class="flex items-center gap-1 h-full px-4 py-4 hover:bg-slate-700 hover:text-blue-300 transition-colors border-b-2 border-transparent group-hover:bg-slate-700 group-hover:border-blue-400 group-hover:text-blue-300">
+              Contenedores <span class="text-xs opacity-60">▼</span>
             </button>
-            <!-- Dropdown Menu -->
-            <ul class="absolute left-0 mt-0 w-48 bg-slate-800 text-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
-              <li>
-                <a href="./contenedores-y-backgrounds/background.html" class="block px-4 py-2 hover:bg-blue-500 first:rounded-t-md">
-                  Background
-                </a>
-              </li>
-              <li>
-                <a href="./contenedores-y-backgrounds/blendmode.html" class="block px-4 py-2 hover:bg-blue-500">
-                  Blendmode
-                </a>
-              </li>
-               <li>
-                <a href="./contenedores-y-backgrounds/sombras.html" class="block px-4 py-2 hover:bg-blue-500">
-                  Sombras
-                </a>
-              </li>
-              <li>
-                <a href="./contenedores-y-backgrounds/opacity.html" class="block px-4 py-2 hover:bg-blue-500">
-                  Opacity
-                </a>
-              </li>
-              <li>
-                <a href="./contenedores-y-backgrounds/filtros.html" class="block px-4 py-2 hover:bg-blue-500 last:rounded-b-md">
-                  Filtros, Backdrop y Drop Shadow
-                </a>
-              </li>
-              <li>
-                <a href="./contenedores-y-backgrounds/border.html" class="block px-4 py-2 hover:bg-blue-500 last:rounded-b-md">
-                  Bordes
-                </a>
-              </li>
-              <li>
-                <a href="./contenedores-y-backgrounds/divider.html" class="block px-4 py-2 hover:bg-blue-500 last:rounded-b-md">
-                  Divider
-                </a>
-              </li>
+            <ul class="absolute left-0 top-full w-52 bg-slate-800 rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-blue-400 py-1">
+              <li><a href="./contenedores-y-backgrounds/background.html" class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Background</a></li>
+              <li><a href="./contenedores-y-backgrounds/blendmode.html"  class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Blend Mode</a></li>
+              <li><a href="./contenedores-y-backgrounds/sombras.html"    class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Sombras</a></li>
+              <li><a href="./contenedores-y-backgrounds/opacity.html"    class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Opacity</a></li>
+              <li><a href="./contenedores-y-backgrounds/filtros.html"    class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Filtros y Drop Shadow</a></li>
+              <li><a href="./contenedores-y-backgrounds/border.html"     class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Bordes</a></li>
+              <li><a href="./contenedores-y-backgrounds/divider.html"    class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Divider</a></li>
             </ul>
           </li>
 
+          <!-- Layout -->
           <li class="relative group">
-            <button class="hover:text-blue-400 transition-colors">
-              Layout ▼
+            <button class="flex items-center gap-1 h-full px-4 py-4 hover:bg-slate-700 hover:text-blue-300 transition-colors border-b-2 border-transparent group-hover:bg-slate-700 group-hover:border-blue-400 group-hover:text-blue-300">
+              Layout <span class="text-xs opacity-60">▼</span>
             </button>
-            <!-- Dropdown Menu -->
-            <ul class="absolute left-0 mt-0 w-48 bg-slate-800 text-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
-              <li>
-                <a href="./layout/imagenes.html" class="block px-4 py-2 hover:bg-blue-500 first:rounded-t-md">
-                  Imágenes
-                </a>
-              </li>
-            
-              <li>
-                <a href="./layout/display.html" class="block px-4 py-2 hover:bg-blue-500 first:rounded-t-md">
-                  Display (block, inline, table)
-                </a>
-              </li>
-              <li>
-                <a href="./layout/posicionamiento.html" class="block px-4 py-2 hover:bg-blue-500 first:rounded-t-md">
-                  Posicionamiento y z-index
-                </a>
-              </li>
-              <li>
-                <a href="./layout/float.html" class="block px-4 py-2 hover:bg-blue-500 first:rounded-t-md">
-                  Float y Clear
-                </a>
-              </li>
-              <li>
-                <a href="./layout/ocultar.html" class="block px-4 py-2 hover:bg-blue-500 first:rounded-t-md">
-                  Modos ocultar elementos
-                </a>
-              </li>
-              <li>
-                <a href="./layout/columns.html" class="block px-4 py-2 hover:bg-blue-500 first:rounded-t-md">
-                  Uso de Columns
-                </a>
-              </li>
+            <ul class="absolute left-0 top-full w-52 bg-slate-800 rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-blue-400 py-1">
+              <li><a href="./layout/imagenes.html"        class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Imágenes</a></li>
+              <li><a href="./layout/display.html"         class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Display</a></li>
+              <li><a href="./layout/posicionamiento.html" class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Posicionamiento y z-index</a></li>
+              <li><a href="./layout/float.html"           class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Float y Clear</a></li>
+              <li><a href="./layout/ocultar.html"         class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Ocultar Elementos</a></li>
+              <li><a href="./layout/columns.html"         class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Columns</a></li>
             </ul>
           </li>
 
+          <!-- Flex -->
           <li class="relative group">
-            <button class="hover:text-blue-400 transition-colors">
-              Flex ▼
+            <button class="flex items-center gap-1 h-full px-4 py-4 hover:bg-slate-700 hover:text-blue-300 transition-colors border-b-2 border-transparent group-hover:bg-slate-700 group-hover:border-blue-400 group-hover:text-blue-300">
+              Flex <span class="text-xs opacity-60">▼</span>
             </button>
-            <!-- Dropdown Menu -->
-            <ul class="absolute left-0 mt-0 w-48 bg-slate-800 text-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
-              <li>
-                <a href="./flexbox/fundamentos.html" class="block px-4 py-2 hover:bg-blue-500 first:rounded-t-md">
-                  Fundamentos
-                </a>
-              </li>
-            
-              <li>
-                <a href="./flexbox/self.html" class="block px-4 py-2 hover:bg-blue-500 first:rounded-t-md">
-                  Align-self
-                </a>
-              </li>
-
-              <li>
-                <a href="./flexbox/order.html" class="block px-4 py-2 hover:bg-blue-500 first:rounded-t-md">
-                  Order
-                </a>
-              </li>
+            <ul class="absolute left-0 top-full w-40 bg-slate-800 rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-blue-400 py-1">
+              <li><a href="./flexbox/fundamentos.html" class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Fundamentos</a></li>
+              <li><a href="./flexbox/self.html"        class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Align Self</a></li>
+              <li><a href="./flexbox/order.html"       class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Order</a></li>
             </ul>
           </li>
 
+          <!-- Grid — dropdown alineado a la derecha para no salirse de pantalla -->
           <li class="relative group">
-            <button class="hover:text-blue-400 transition-colors">
-              Grid ▼
+            <button class="flex items-center gap-1 h-full px-4 py-4 hover:bg-slate-700 hover:text-blue-300 transition-colors border-b-2 border-transparent group-hover:bg-slate-700 group-hover:border-blue-400 group-hover:text-blue-300">
+              Grid <span class="text-xs opacity-60">▼</span>
             </button>
-            <!-- Dropdown Menu -->
-            <ul class="absolute left-0 mt-0 w-48 bg-slate-800 text-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-10">
-              <li>
-                <a href="./grid/fundamentos.html" class="block px-4 py-2 hover:bg-blue-500 first:rounded-t-md">
-                  Fundamentos
-                </a>
+            <ul class="absolute right-0 top-full w-56 bg-slate-800 rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-blue-400 py-1">
+              <li><a href="./grid/fundamentos.html"     class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Fundamentos</a></li>
+              <li><a href="./grid/implicita.html"       class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Implícita</a></li>
+              <li><a href="./grid/posicionamiento.html" class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Posicionamiento</a></li>
+              <li class="border-t border-slate-600 mt-1 pt-1">
+                <span class="block px-4 py-1 text-xs font-semibold text-slate-400 uppercase tracking-wider">Alineación</span>
               </li>
-              <li>
-                <a href="./grid/posicionamiento.html" class="block px-4 py-2 hover:bg-blue-500">
-                  Posicionamiento
-                </a>
-              </li>
-              <li>
-                <a href="./grid/alineacion.html" class="block px-4 py-2 hover:bg-blue-500 last:rounded-b-md">
-                  Alineación (justify-items, items, place-items, self)
-                </a>
-              </li>
-              <li>
-                <a href="./grid/multilinea.html" class="block px-4 py-2 hover:bg-blue-500">
-                  Alineación Multilínea (justify-content, content, place-content)
-                </a>
-              </li>
-              <li>
-                <a href="./grid/guia-alineacion.html" class="block px-4 py-2 hover:bg-blue-500 last:rounded-b-md">
-                  Guía de Alineación (de ambas)
-                </a>
-              </li>
-              <li>
-                <a href="./grid/implicita.html" class="block px-4 py-2 hover:bg-blue-500">
-                  Implícita
-                </a>
-              </li>
+              <li><a href="./grid/alineacion.html"      class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Items y Self</a></li>
+              <li><a href="./grid/multilinea.html"      class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Content (multilínea)</a></li>
+              <li><a href="./grid/guia-alineacion.html" class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors font-semibold">★ Guía Completa</a></li>
+            </ul>
+          </li>
+
+          <!-- Transformaciones y Animaciones -->
+          <li class="relative group">
+            <button class="flex items-center gap-1 h-full px-4 py-4 hover:bg-slate-700 hover:text-blue-300 transition-colors border-b-2 border-transparent group-hover:bg-slate-700 group-hover:border-blue-400 group-hover:text-blue-300">
+              Animaciones <span class="text-xs opacity-60">▼</span>
+            </button>
+            <ul class="absolute right-0 top-full w-48 bg-slate-800 rounded-b-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border-t-2 border-blue-400 py-1">
+              <li><a href="./transformaciones-animaciones/transform.html"   class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Transform</a></li>
+              <li><a href="./transformaciones-animaciones/transition.html"  class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Transition</a></li>
+              <li><a href="./transformaciones-animaciones/animaciones.html" class="block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors">Animaciones</a></li>
             </ul>
           </li>
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link href="../output.css" rel="stylesheet">
+</head>
+<body class="bg-blue-500 text-white">
+
+     <!-- Spin -->
+     <div class="text-center my-48">
+          <p class="text-xl font-bold mb-2">animate-spin</p>
+          <p class="text-sm text-blue-200 mb-6">Gira el elemento continuamente 360°. Útil para indicadores de carga.</p>
+          <img src="img/globe.png" class="w-40 h-40 opacity-70 mx-auto animate-spin">
+     </div>
+
+     <!-- Ping -->
+     <div class="text-center my-48">
+          <p class="text-xl font-bold mb-2">animate-ping</p>
+          <p class="text-sm text-blue-200 mb-6">Escala y desvanece como una onda expansiva. Ideal para notificaciones o alertas en tiempo real.</p>
+          <div class="relative w-20 h-20 bg-white rounded-lg shadow-2xl mx-auto">
+               <div class="absolute -top-1 -right-1 bg-red-500 w-4 h-4 rounded-full animate-ping"></div>
+               <div class="absolute -top-1 -right-1 bg-red-500 w-4 h-4 rounded-full"></div>
+          </div>
+     </div>
+
+     <!-- Pulse -->
+     <div class="text-center my-48">
+          <p class="text-xl font-bold mb-2">animate-pulse</p>
+          <p class="text-sm text-blue-200 mb-6">Atenúa y restaura la opacidad suavemente. Muy usado en skeleton loaders mientras carga contenido.</p>
+          <div class="bg-white w-40 h-40 rounded shadow-md mx-auto animate-pulse"></div>
+     </div>
+
+     <!-- Bounce -->
+     <div class="text-center my-48">
+          <p class="text-xl font-bold mb-2">animate-bounce</p>
+          <p class="text-sm text-blue-200 mb-6">Mueve el elemento hacia arriba y abajo. Típico para indicar que hay más contenido al hacer scroll.</p>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 mx-auto animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
+     </div>
+</html>
