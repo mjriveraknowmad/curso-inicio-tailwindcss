@@ -29,5 +29,4 @@ Thumbs.db
 out/
 
 # Build output
-*.css
-!./src/**/*.css
+output.css
