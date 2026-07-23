@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="../output.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container mx-auto py-10">
+      <div class="bg-blue-300 mx-auto w-6/12 h-96 relative">
+        <div class="bg-blue-500 w-20 h-20 sticky top-0">
+          Sticky dentro del relative
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto py-10">
+      <div class="bg-blue-300 mx-auto w-6/12 h-52 relative">
+        Contenedor relative del fixed
+        <div class="bg-blue-500 w-20 h-40 fixed top-0 right-0">
+          fixed top-0 right-0 dentro del relative
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto py-10">
+      <div class="relative bg-blue-300 mx-auto w-6/12 h-96">
+        <p>Contenedor relativo </p>
+        <div class="absolute bottom-0 left-0 bg-blue-500 w-20 h-20">
+          <p>Absolute de dentro del relative</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto py-10">
+      <div class="static bg-blue-300 mx-auto w-6/12 h-96">
+        <p>Contenedor static</p>
+        <div class="absolute bottom-0 left-0 bg-blue-500 w-20 h-20">
+          <p>Absolute de dentro del static</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto py-10">
+        Con contenedores relativos, podemos posicionar elementos de manera absoluta dentro de ellos. A continuación, se muestran ejemplos de cómo se comportan los elementos con diferentes clases de posicionamiento en Tailwind CSS.
+        (Más info <a href="https://tailwindcss.com/docs/top-right-bottom-left" class="text-blue-500 underline">aquí</a>)
+    </div>
+    <div
+      class="grid grid-cols-3 grid-rows-3 place-items-center gap-4 font-mono text-sm leading-6 font-bold text-white"
+    >
+      <div class="relative size-18 rounded-lg sm:size-32">
+        <div class="absolute inset-0">
+          <div
+            class="h-full rounded-lg border text-black/10 dark:text-white/12.5 bg-size-[8px_8px] bg-top-left bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)]"
+          ></div>
+        </div>
+        <div
+          class="absolute top-0 left-0 flex size-16 items-center justify-center rounded-lg bg-purple-500 p-4"
+        >
+          absolute top-0 left-0
+        </div>
+      </div>
+      <div class="relative size-18 rounded-lg sm:size-34">
+        <div class="absolute inset-0">
+          <div
+            class="h-full rounded-lg border text-black/10 dark:text-white/12.5 bg-size-[8px_8px] bg-top-left bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)]"
+          ></div>
+        </div>
+        <div
+          class="absolute inset-x-0 top-0 flex h-16 items-center justify-center rounded-lg bg-purple-500 p-4"
+        >
+          absolute inset-x-0 top-0
+        </div>
+      </div>
+      <div class="relative size-18 rounded-lg sm:size-34">
+        <div class="absolute inset-0">
+          <div
+            class="h-full rounded-lg border text-black/10 dark:text-white/12.5 bg-size-[8px_8px] bg-top-left bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)]"
+          ></div>
+        </div>
+        <div
+          class="absolute top-0 right-0 flex size-16 items-center justify-center rounded-lg bg-purple-500 p-4"
+        >
+          absolute top-0 right-0
+        </div>
+      </div>
+      <div class="relative size-18 rounded-lg sm:size-34">
+        <div class="absolute inset-0">
+          <div
+            class="h-full rounded-lg border text-black/10 dark:text-white/12.5 bg-size-[8px_8px] bg-top-left bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)]"
+          ></div>
+        </div>
+        <div
+          class="absolute inset-y-0 left-0 flex w-16 items-center justify-center rounded-lg bg-purple-500 p-4"
+        >
+          absolute inset-y-0<br/>left-0
+        </div>
+      </div>
+      <div class="relative size-18 rounded-lg sm:size-34">
+        <div class="absolute inset-0">
+          <div
+            class="h-full rounded-lg border text-black/10 dark:text-white/12.5 bg-size-[8px_8px] bg-top-left bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)]"
+          ></div>
+        </div>
+        <div
+          class="absolute inset-0 flex items-center justify-center rounded-lg bg-purple-500 p-4"
+        >
+          absolute inset-0
+        </div>
+      </div>
+      <div class="relative size-18 rounded-lg sm:size-34">
+        <div class="absolute inset-0">
+          <div
+            class="h-full rounded-lg border text-black/10 dark:text-white/12.5 bg-size-[8px_8px] bg-top-left bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)]"
+          ></div>
+        </div>
+        <div
+          class="absolute inset-y-0 right-0 flex w-16 items-center justify-center rounded-lg bg-purple-500 p-4"
+        >
+          absolute inset-y-0 <br/>right-0
+        </div>
+      </div>
+      <div class="relative size-18 rounded-lg sm:size-34">
+        <div class="absolute inset-0">
+          <div
+            class="h-full rounded-lg border text-black/10 dark:text-white/12.5 bg-size-[8px_8px] bg-top-left bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)]"
+          ></div>
+        </div>
+        <div
+          class="absolute bottom-0 left-0 flex size-16 items-center justify-center rounded-lg bg-purple-500 p-4"
+        >
+          absolute bottom-0 left-0
+        </div>
+      </div>
+      <div class="relative size-18 rounded-lg sm:size-34">
+        <div class="absolute inset-0">
+          <div
+            class="h-full rounded-lg border text-black/10 dark:text-white/12.5 bg-size-[8px_8px] bg-top-left bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)]"
+          ></div>
+        </div>
+        <div
+          class="absolute inset-x-0 bottom-0 flex h-16 items-center justify-center rounded-lg bg-purple-500 p-4"
+        >
+          absolute inset-x-0 bottom-0
+        </div>
+      </div>
+      <div class="relative size-18 rounded-lg sm:size-34">
+        <div class="absolute inset-0">
+          <div
+            class="h-full rounded-lg border text-black/10 dark:text-white/12.5 bg-size-[8px_8px] bg-top-left bg-[repeating-linear-gradient(315deg,currentColor_0,currentColor_1px,transparent_0,transparent_50%)]"
+          ></div>
+        </div>
+        <div
+          class="absolute right-0 bottom-0 flex size-16 items-center justify-center rounded-lg bg-purple-500 p-4"
+        >
+          absolute right-0 bottom-0
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
