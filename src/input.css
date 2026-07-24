@@ -25,3 +25,11 @@
   }
 }
 */
+
+/* Ejemplo de media query:
+En Tailwind CSS v4, @screen fue eliminado. Ahora se utiliza @media con theme(--breakpoint-*) */
+@media (width >= theme(--breakpoint-2xl)) {
+  .bg-negro {
+    background-color: black;
+  }
+}
