@@ -1,0 +1,49 @@
+¿Qué son las directivas en tailwindcss v3?
+
+Estas son instrucciones que nos permite que tailwindcss agregue estilos definidos a nuestros archivos de CSS.
+
+Las directivas de tailwindcss se componen en tres directivas: 
+
+La directiva base, que son estilos base, estilos que se le puede aplicar a párrafos, a enlaces, a div, a elementos html.
+La directiva components, son códigos o estilos que se pueden agregar a componentes como pueden ser una clase para un botón, una clase para un contenedor o clases para diferentes elementos. Estamos hablando de clases personalizadas para crear componentes.
+La directiva utilities, que nos permite clases que van a funcionar como utilidades, ya sea margen, text align, padding, etcétera 
+
+Lo que nos permiten estas directivas básicamente es agrupar los códigos, agrupar estilos base, estilos de componentes y estilos de utilidades.
+
+Todos los estilos para elementos HTML están en la directiva base (@layer base {})
+Todos los estilos de componentes están en la directiva components.(@layer components {})
+Todos los estilos para padding text align margen están en la directiva utilities. (@layer utilities {})
+
+Puedes visualizarlo como una carpeta de elementos que dentro de la carpeta base tiene ciertos estilos para estilos base, dentro de la carpeta components para los componentes y dentro de la carpeta utilities para cualquiera de las utilidades de tailwindcss, que es el tailwind.config.js.
+tailwind.config.js nos permite configurar y personalizar nuestro tailwindcss, dentro del cual tenemos las secciones: 
+- content, que nos permite configurar los archivos que detectará tailwind, normalmente se configura para HTML y JS,  para que puedan generar los estilos que aparecen en su contenido. Básicamente va a la ruta de dónde están los archivos HTML y JS que van a trabajar con tailwindcss.
+- theme, o el tema, es la personalización en tailwindcss viva. Nos permite la sección de theme es poder manipular y editar los valores del tema de tailwindcss, ya sean tamaños, espaciado, colores, puntos de corte. Yo puedo editar con mis valores personalizados para crear mi propio tema y mis propios elementos.
+- plugins, como su palabra lo dice, es donde nosotros podemos con código en JavaScript, crear nuestros propios plugins, crear nuestro propio código en JavaScript para generar estilos en CSS. Básicamente son extensiones de código, extensiones de estilo, donde nosotros podemos agregar componentes, agregar utilidades, agregar cualquier cantidad de estilos. 
+
+
+En v4:
+
+En Tailwind CSS v4 sigue siendo válido usar @layer components, pero hay diferencias importantes:
+
+@layer components → Sigue funcionando para estilos de componentes
+@utility → Es la nueva forma recomendada para definir utilidades personalizadas
+
+
+La diferencia es conceptual:
+
+@layer components → Clases de componentes (tienen menor precedencia que las utilidades, pueden ser sobreescritas por ellas)
+@utility → Utilidades personalizadas (misma precedencia que las de Tailwind)
+
+Para una clase como .nav-dropdown-item que agrupa estilos de componente, @layer components es correcto. Si fuera una utilidad del estilo text-*, bg-*, usarías @utility.
+
+
+@import "tailwindcss";
+
+/* Opción v4 con @utility (para utilidades, no componentes) */
+@utility nav-dropdown-item {
+  @apply block px-4 py-2 hover:bg-slate-700 hover:text-blue-300 transition-colors;
+}
+
+Además en Tailwind CSS v4, el archivo tailwind.config.js ya no se utiliza de forma predeterminada.
+
+Tailwind v4 adoptó un enfoque "CSS-first" (centrado en CSS nativo), trasladando toda la configuración al propio archivo CSS mediante la nueva directiva @theme.
