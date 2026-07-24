@@ -33,3 +33,9 @@ En Tailwind CSS v4, @screen fue eliminado. Ahora se utiliza @media con theme(--b
     background-color: black;
   }
 }
+
+/* Ejemplo uso de función theme(). Info de personalización : 
+https://tailwindcss.com/docs/adding-custom-styles y https://tailwindcss.com/docs/theme */
+.prueba {
+  background-color: theme(--color-red-50);
+}
