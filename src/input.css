@@ -51,3 +51,20 @@ https://tailwindcss.com/docs/adding-custom-styles y https://tailwindcss.com/docs
   /* Extiende el tema agregando un nuevo color */
   --color-brand: #3b82f6;
 }
+
+/* Ejemplo de lo que sería un preset ahora en v4, en lugar de configurarlo en el tailwind.config.js */
+/* archivo: presets/brand-theme.css */
+/*
+@theme {
+  --color-primary: #3b82f6;
+  --color-secondary: #10b981;
+  --font-heading: 'Poppins', sans-serif;
+}*/
+/* y ya en el main.css, usaríamos el preset, donde podríamos sobrescribir variables si es necesario */
+/*@import "tailwindcss";
+@import "./presets/brand-theme.css";*/ /* Tu Preset */
+
+/* Si deseas extender o modificar algo del preset localmente, por ej. */
+/*@theme {
+  --color-primary: #1d4ed8;
+}*/
