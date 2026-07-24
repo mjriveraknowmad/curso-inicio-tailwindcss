@@ -39,3 +39,15 @@ https://tailwindcss.com/docs/adding-custom-styles y https://tailwindcss.com/docs
 .prueba {
   background-color: theme(--color-red-50);
 }
+
+/* Ejemplo de theme, se podría añadir en un archivo aparte , y así hacer diferentes theme, como https://tailwindcss.com/docs/theme */
+@theme {
+  /* Elimina todos los colores por defecto de Tailwind: */
+  /* --color-*: initial;*/
+
+  /* Sobrescribe únicamente la variable red-500 por defecto */
+  --color-red-500: #ff1a1a;
+  
+  /* Extiende el tema agregando un nuevo color */
+  --color-brand: #3b82f6;
+}
