@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode - Tailwind CSS</title>
+    <link href="../output.css" rel="stylesheet">
+</head>
+
+<body class="bg-white dark:bg-gray-900 transition-colors duration-300 min-h-screen p-8">
+
+    <!-- Toggle -->
+    <div class="flex justify-end mb-8">
+        <button
+            onclick="document.documentElement.classList.toggle('dark')"
+            class="px-4 py-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 font-semibold hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+        >
+            🌙 Alternar Dark Mode
+        </button>
+    </div>
+
+    <div class="max-w-4xl mx-auto space-y-8">
+
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white">
+            Dark Mode con Tailwind CSS
+        </h1>
+        <p class="text-gray-600 dark:text-gray-400">
+            Para habilitar dark mode basado en clase .dark en v4, hay que añadir en el css: <br/>
+            @custom-variant dark (&:where(.dark, .dark *));<br/>
+            Ya que por defecto usa prefers-color-scheme (preferencia del sistema).
+        </p>
+        <p class="text-gray-600 dark:text-gray-400">
+            El prefijo <code class="bg-gray-100 dark:bg-gray-800 text-pink-600 dark:text-pink-400 px-1 rounded">dark:</code>
+            aplica estilos solo cuando el elemento <code class="bg-gray-100 dark:bg-gray-800 text-pink-600 dark:text-pink-400 px-1 rounded">&lt;html&gt;</code>
+            tiene la clase <code class="bg-gray-100 dark:bg-gray-800 text-pink-600 dark:text-pink-400 px-1 rounded">dark</code>.
+        </p>
+        
+
+
+        <!-- Tarjeta básica -->
+        <section>
+            <h2 class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">Tarjeta básica</h2>
+            <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-md dark:shadow-gray-900">
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Título de la tarjeta</h3>
+                <p class="text-gray-600 dark:text-gray-400">Este es un párrafo de ejemplo. Observa cómo cambian el fondo, el texto y el borde entre el modo claro y oscuro.</p>
+                <button class="mt-4 px-4 py-2 bg-blue-500 dark:bg-blue-600 hover:bg-blue-600 dark:hover:bg-blue-500 text-white rounded-lg transition-colors">
+                    Acción principal
+                </button>
+            </div>
+        </section>
+
+        <!-- Colores de texto -->
+        <section>
+            <h2 class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">Colores de texto</h2>
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 space-y-2">
+                <p class="text-gray-900 dark:text-white font-semibold">text-gray-900 / dark:text-white → Título principal</p>
+                <p class="text-gray-700 dark:text-gray-200">text-gray-700 / dark:text-gray-200 → Texto secundario</p>
+                <p class="text-gray-500 dark:text-gray-400">text-gray-500 / dark:text-gray-400 → Texto auxiliar</p>
+                <p class="text-blue-600 dark:text-blue-400">text-blue-600 / dark:text-blue-400 → Enlace o acento</p>
+                <p class="text-red-600 dark:text-red-400">text-red-600 / dark:text-red-400 → Error o advertencia</p>
+                <p class="text-green-600 dark:text-green-400">text-green-600 / dark:text-green-400 → Éxito</p>
+            </div>
+        </section>
+
+        <!-- Backgrounds -->
+        <section>
+            <h2 class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">Fondos</h2>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center">
+                    <p class="text-sm text-gray-600 dark:text-gray-400">bg-white / dark:bg-gray-900</p>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 text-center">
+                    <p class="text-sm text-gray-600 dark:text-gray-400">bg-gray-50 / dark:bg-gray-800</p>
+                </div>
+                <div class="bg-gray-100 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg p-4 text-center">
+                    <p class="text-sm text-gray-600 dark:text-gray-300">bg-gray-100 / dark:bg-gray-700</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario -->
+        <section>
+            <h2 class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">Formulario</h2>
+            <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-sm space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Nombre</label>
+                    <input
+                        type="text"
+                        placeholder="Tu nombre"
+                        class="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
+                    />
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                    <input
+                        type="email"
+                        placeholder="tu@email.com"
+                        class="w-full px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"
+                    />
+                </div>
+                <button class="w-full py-2 bg-blue-500 dark:bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-600 dark:hover:bg-blue-500 transition-colors">
+                    Enviar
+                </button>
+            </div>
+        </section>
+
+        <!-- Badge / Pills -->
+        <section>
+            <h2 class="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">Badges</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="px-3 py-1 rounded-full text-sm font-medium bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300">Información</span>
+                <span class="px-3 py-1 rounded-full text-sm font-medium bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300">Éxito</span>
+                <span class="px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 dark:bg-yellow-900 text-yellow-700 dark:text-yellow-300">Advertencia</span>
+                <span class="px-3 py-1 rounded-full text-sm font-medium bg-red-100 dark:bg-red-900 text-red-700 dark:text-red-300">Error</span>
+                <span class="px-3 py-1 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300">Neutral</span>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
